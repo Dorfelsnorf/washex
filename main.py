@@ -1,9 +1,10 @@
 from namelist import arabname, turkname
-from test import namelist, namelist2
+from test import namelist
 
 import pandas as pd
 
-def check_name(name):                            #simple check if the first name fits
+
+def check_name(name):  # Simple check if the first name fits
     try:
         name.index(" ")
     except ValueError:
@@ -21,17 +22,14 @@ def check_name(name):                            #simple check if the first name
         return "none"
 
 
-#def import_csv():               #Imports the csv file
-    #TODO fix this
+# def import_csv():               # Imports the csv file
+# TODO fix this
 
-#def wash_criteria_set():                        #sets criteria for the wash
-    #TODO allow users to set their criteria and coloumn for washing
-
+# def wash_criteria_set():                        # Sets criteria for the wash
+# TODO allow users to set their criteria and coloumn for washing
 
 
 if __name__ == '__main__':
 
-    for name in namelist2:
+    for name in namelist:
         print(name, " ", check_name(name))
-
-
